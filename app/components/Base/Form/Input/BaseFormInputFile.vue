@@ -45,6 +45,7 @@ const onFileChange = async (event: Event) => {
     :label="label"
     :error-message="errorMessage"
     :required="required"
+    class="flex flex-col"
   >
     <img
       v-if="value"

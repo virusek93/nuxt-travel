@@ -22,7 +22,7 @@ export const getTravelSchema = (today?: Date) => {
       ),
       pictureUrl: v.pipe(v.string(), v.nonEmpty('This field is required')),
       description: v.pipe(v.string(), v.nonEmpty('This field is required')),
-      price: v.number(),
+      price: v.number('This field is required'),
       userRating: v.pipe(v.number(), v.minValue(0), v.maxValue(5)),
     }),
     v.forward(

@@ -105,7 +105,7 @@ const onEditItem = async (item: Omit<Travel, 'id'>) => {
     <slot name="title" />
   </h2>
   <form
-    class="flex flex-col gap-2"
+    class="flex min-w-80 flex-col gap-2"
     @submit.prevent="onSubmit"
   >
     <BaseFormInput

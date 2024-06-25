@@ -97,7 +97,7 @@ const onSubmit = handleSubmit(async (values) => {
     />
   </div>
   <form
-    class="m-auto flex min-h-80 max-w-xl flex-col px-4"
+    class="m-auto flex min-h-80 min-w-80 max-w-80 flex-col px-4"
     @submit.prevent="onSubmit"
   >
     <section
