@@ -93,6 +93,7 @@ const onEditItem = async (item: Omit<Travel, 'id'>) => {
   })
   if (data) {
     alert('Edit success')
+    emit('refreshData')
     emit('close')
   }
   return data
