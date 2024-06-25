@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BaseFormTextArea > Should render and match the snapshot 1`] = `
+<div>
+  <label
+    class="flex cursor-pointer flex-col items-start gap-0.5 text-sm font-medium text-gray-500"
+    data-test="form-label"
+    for="areaName"
+  >
+    <span
+      class="after:ml-0.5 after:hidden after:text-red-500 after:content-['*']"
+    >
+      areaLabel
+    </span>
+  </label>
+  
+  <textarea
+    class="min-w-52 rounded-md border border-gray-300 px-4 py-2 test-custom-class"
+    id="areaName"
+    name="areaName"
+    placeholder="areaPlaceholder"
+  />
+  
+  <!--v-if-->
+</div>
+`;

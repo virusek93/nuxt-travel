@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BaseHeader > Should render and match the snapshot 1`] = `
+<nav
+  class="flex min-h-20 items-center"
+>
+  <ul
+    class="flex list-none gap-5 p-0"
+  >
+    <li>
+      <router-link-stub
+        activeclass="text-lime-600"
+        class="underline-offset-2 hover:underline"
+        to="/"
+      />
+    </li>
+    <li>
+      <router-link-stub
+        activeclass="text-lime-600"
+        class="underline-offset-2 hover:underline"
+        to="/booking"
+      />
+    </li>
+    <li>
+      <router-link-stub
+        activeclass="text-lime-600"
+        class="underline-offset-2 hover:underline"
+        to="/travel"
+      />
+    </li>
+  </ul>
+</nav>
+`;

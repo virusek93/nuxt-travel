@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BaseModal > Should render and match the snapshot 1`] = `
+<dialog
+  class="rounded bg-white p-5 backdrop:bg-black/50"
+>
+  <div
+    class="mb-4 flex items-center"
+    data-test="content"
+  >
+    
+    
+    <button
+      class="ml-auto flex min-h-4 min-w-4 items-center transition-opacity hover:opacity-50"
+      type="button"
+    >
+       X 
+    </button>
+  </div>
+  
+  
+</dialog>
+`;

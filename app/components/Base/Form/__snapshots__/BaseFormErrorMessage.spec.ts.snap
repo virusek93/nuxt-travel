@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BaseFormErrorMessage > Should render and match the snapshot 1`] = `
+<span
+  class="text-sm text-red-500"
+>
+  
+  Test slot
+  
+</span>
+`;
