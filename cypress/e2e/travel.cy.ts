@@ -1,0 +1,26 @@
+describe('template spec', () => {
+  beforeEach(() => {
+    cy.task('db:seed')
+  })
+  it('passes', () => {
+    cy.visit('/travel')
+  })
+  it('Create new travel', () => {
+    cy.fixture('file.svg', null).as('myTestFile')
+    cy.visit('/travel')
+    cy.wait(1500)
+    cy.get('[data-cy="travel-items"]', { timeout: 2000 }).as('travelItems')
+    cy.get('@travelItems').should('have.length', 5)
+    cy.get('[data-cy="add-new"]').click()
+    cy.get('[data-cy="travel-modal"]').as('travel-modal')
+    cy.get('@travel-modal').should('be.visible')
+    cy.get('@travel-modal').find('input').first().type('Test Name')
+    cy.get('@travel-modal').find(`[name="startDate"]`).type('2025-02-22')
+    cy.get('@travel-modal').find(`[name="endDate"]`).type('2025-02-27')
+    cy.get('@travel-modal').find(`[name="price"]`).type('2000')
+    cy.get('@travel-modal').find(`[type="file"]`).selectFile('@myTestFile')
+    cy.get('@travel-modal').find(`[name="description"]`).type('Test Description')
+    cy.get('@travel-modal').find('button[type="submit"]').click({ force: true })
+    cy.get('@travelItems').should('have.length', 6)
+  })
+})

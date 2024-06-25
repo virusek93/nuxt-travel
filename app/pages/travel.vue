@@ -63,6 +63,7 @@ const debouncedSearchByName = useDebounceFn((e) => {
     <div class="mb-3 flex gap-2">
       <button
         type="button"
+        data-cy="add-new"
         class="ml-auto rounded bg-green-700 px-4 py-3 text-white transition-all hover:bg-green-800"
         @click="onAddNewItem"
       >
@@ -170,6 +171,7 @@ const debouncedSearchByName = useDebounceFn((e) => {
             <tr
               v-for="{ value: item, key } in travels"
               :key="key"
+              data-cy="travel-items"
             >
               <td class="border p-4">
                 {{ item.name }}
@@ -208,6 +210,7 @@ const debouncedSearchByName = useDebounceFn((e) => {
     </div>
     <BaseModal
       :is-modal-open="isModalOpen"
+      data-cy="travel-modal"
       @close="isModalOpen = false"
     >
       <template #title>
