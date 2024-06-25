@@ -14,6 +14,9 @@
     "test": "vitest",
     "prepare": "husky"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --cache"
   },
