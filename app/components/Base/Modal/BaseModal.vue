@@ -3,14 +3,11 @@ const dialogRef = ref<HTMLDialogElement>()
 const props = defineProps<{ isModalOpen: boolean }>()
 defineEmits(['close'])
 watchEffect(() => {
-  if (!dialogRef.value) {
-    return
-  }
   if (props.isModalOpen) {
-    dialogRef.value.showModal()
+    dialogRef.value?.showModal()
     return
   }
-  dialogRef.value.close()
+  dialogRef.value?.close()
 })
 </script>
 
